@@ -8,11 +8,18 @@ import jakarta.ws.rs.core.Context;
 
 import org.jboss.resteasy.spi.ResteasyConfiguration;
 
-@Path("/greeting")
+
 public class GreetingResource {
 
     @POST
+    @Path("/greeting")
     public Greeting hello(Greeting body) {
+        return body;
+    }
+
+    @POST
+    @Path("/greeting2")
+    public Greeting hello2(Greeting body) {
         return body;
     }
 
